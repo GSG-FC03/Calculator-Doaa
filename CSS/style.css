@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "OleoScript-Bold";
+  src: url(../assets/fonts/OleoScript-Bold.ttf);
+}
+@font-face {
+  font-family: "OleoScript-Regular";
+  src: url(../assets/fonts/OleoScript-Regular.ttf);
+}
+
+html {
+  font-family: "OleoScript-Bold";
+  font-size: 62.5%;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  height: auto;
+  overflow: hidden;
+}
+/* Headr Style */
+header {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  background: -webkit-linear-gradient(
+    rgba(37, 12, 59, 0.856),
+    rgba(197, 114, 236, 0.658)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4.5rem;
+  letter-spacing: 0.1em;
+}
+/* Calculator screen style */
+.screenContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 4vh;
+}
+.img img {
+  position: relative;
+  right: 0;
+  top: 38px;
+  padding: 9px 8px;
+}
+.img {
+  position: absolute;
+  right: 0;
+  top: -22%;
+  padding: 0 7%;
+}
+.screen {
+  width: 100%;
+  height: 80px;
+  display: inline-block;
+  margin-inline: 4vw;
+  border-radius: 10px;
+  border-width: thick;
+}
+
+.screenContainer input {
+  text-align: right;
+  padding: 0 12vw;
+  font-size: 2rem;
+  /* font-weight: bolder; */
+  font-family: "OleoScript-Bold";
+  display: inline-block;
+  box-sizing: border-box;
+  letter-spacing: 3px;
+}
+
+/* container */
+.container {
+  border-style: groove;
+  border-radius: 10px;
+  height: 83vh;
+  width: 90vw;
+  margin-inline: 3vw;
+  margin-top: -2vh;
+  box-shadow: rgb(0 0 0 / 56%) 0px 15px 20px 4px;
+}
+/* style input and button */
+input,
+button {
+  margin: 0;
+  min-height: 40px;
+  min-width: 40px;
+  background: #fff;
+  border: 1px solid #ccc;
+  font-size: 1.4rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgb(0 0 0 / 24%) 0px 10px 8px;
+}
+
+button {
+  height: 100%;
+  outline: none;
+  transition: all 0.2s;
+  border-radius: 18px;
+  font-family: "OleoScript-Regular";
+  font-size: 1.9rem;
+  letter-spacing: 0.1em;
+}
+.btn:hover {
+  background: #010101;
+  color: #fff;
+}
+
+.operator,
+.clear,
+#back {
+  background: rgba(137, 43, 226, 0.856);
+  color: #fff;
+}
+
+/* Grid Style for calculator button*/
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+  height: 60vh;
+  margin-inline: 5vw;
+  margin-top: 3vh;
+  font-family: "OleoScript-Regular";
+}
+.zero {
+  grid-column: 1 / span 2;
+}
+.result {
+  grid-column: 4;
+  grid-row: 4 / span 2;
+  font-size: 4rem;
+}
+.reset {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+#back {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+#back:hover {
+  background: #010101;
+  color: #fff;
+}
+
+/* Currency Button Style */
+.currency {
+  background-color: rgba(137, 43, 226, 0.26);
+  font-size: large;
+  display: none;
+}
+.currency:hover {
+  background: linear-gradient(black, blueviolet);
+  color: #fff;
+}
+
+#showCurrency {
+  grid-column: 1 / span 4;
+  grid-row: 6 / span 2;
+  background-color: rgba(137, 43, 226, 0.26);
+  font-size: 2.5rem;
+}
+
+#ILS,
+#US {
+  grid-column: 1 / span 2;
+}
+#Euro {
+  grid-column: 3 / span 2;
+  grid-row: 6;
+}
+#EuroILS {
+  grid-column: 3 / span 2;
+  grid-row: 7;
+}
+
+/* Responsive */
+@media only screen and (min-width: 1023px) {
+  .screenContainer input {
+    padding: 0 5vw;
+  }
+}
+
+/* iPhone 5/SE */
+@media only screen and (min-height: 568px) and (max-height: 600px) {
+  header {
+    margin-top: -4vh;
+  }
+  .calculator {
+    gap: 0.8vw;
+  }
+}
