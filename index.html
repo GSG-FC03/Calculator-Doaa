@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Calculator</h1>
+    </header>
+
+    <div class="container">
+      <!--Calculator screen-->
+      <div class="screenContainer">
+        <input type="text" class="screen" readonly />
+        <!--for currency symbol-->
+        <div class="img"><img id="image" /></div>
+      </div>
+      <!--calculator button-->
+      <div class="calculator">
+        <button type="button" class="btn operator">+</button>
+        <button type="button" class="btn operator">-</button>
+        <button type="button" class="btn operator">*</button>
+        <button type="button" class="btn operator">/</button>
+        <button type="button" class="btn result operator">=</button>
+
+        <button type="button" class="btn digit">1</button>
+        <button type="button" class="btn digit">2</button>
+        <button type="button" class="btn digit">3</button>
+        <button type="button" class="btn digit">4</button>
+        <button type="button" class="btn digit">5</button>
+        <button type="button" class="btn digit">6</button>
+        <button type="button" class="btn reset clear">C</button>
+
+        <button type="button" class="btn digit">7</button>
+        <button type="button" class="btn digit">8</button>
+        <button type="button" class="btn digit">9</button>
+        <button type="button" class="btn zero digit">0</button>
+
+        <button type="button" class="btn dot decimal">.</button>
+        <button type="button" class="btn" id="back">Back</button>
+
+        <!--currency buttons-->
+        <button id="showCurrency">Currency</button>
+        <button type="button" class="btn currency" id="US">ILS into USD</button>
+        <button type="button" class="btn currency" id="ILS">
+          USD into ILS
+        </button>
+        <button type="button" class="btn currency" id="Euro">
+          ILS into EUR
+        </button>
+        <button type="button" class="btn currency" id="EuroILS">
+          EUR into ILS
+        </button>
+      </div>
+    </div>
+    <script src=""></script>
+  </body>
+</html>
