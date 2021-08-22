@@ -102,7 +102,7 @@ USBtn.onclick = () => {
   let US = (screen.value /= "3.1");
   screen.value = US.toFixed(5);
   screen.value = parseFloat(screen.value);
-  toggleImg.src = "../assets/images/USD.svg";
+  toggleImg.src = "./assets/images/USD.svg";
   input = screen.value;
 };
 
@@ -110,7 +110,7 @@ ILSBtn.onclick = () => {
   let ILS = (screen.value *= "3.1");
   screen.value = ILS.toFixed(5);
   screen.value = parseFloat(screen.value);
-  toggleImg.src = "../assets/images/ILS.svg";
+  toggleImg.src = "./assets/images/ILS.svg";
   input = screen.value;
 };
 
@@ -118,14 +118,14 @@ EuroBtn.onclick = () => {
   let Euro = (screen.value /= "2.6");
   screen.value = Euro.toFixed(5);
   screen.value = parseFloat(screen.value);
-  toggleImg.src = "../assets/images/eur.svg";
+  toggleImg.src = "./assets/images/eur.svg";
   input = screen.value;
 };
 EuroILSBtn.onclick = () => {
   let EuroILS = (screen.value *= "2.6");
   screen.value = EuroILS.toFixed(5);
   screen.value = parseFloat(screen.value);
-  toggleImg.src = "../assets/images/ILS.svg";
+  toggleImg.src = "./assets/images/ILS.svg";
   input = screen.value;
 };
 
