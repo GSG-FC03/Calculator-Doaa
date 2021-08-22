@@ -89,3 +89,59 @@ backBtn.addEventListener("click", () => {
   screen.value = screenVal;
   document.getElementById("image").src = "";
 });
+
+//Currency Converter
+const USBtn = document.getElementById("US");
+const ILSBtn = document.getElementById("ILS");
+const EuroBtn = document.getElementById("Euro");
+const EuroILSBtn = document.getElementById("EuroILS");
+const screen = document.getElementById("screen");
+const toggleImg = document.getElementById("image");
+
+USBtn.onclick = () => {
+  let US = (screen.value /= "3.1");
+  screen.value = US.toFixed(5);
+  screen.value = parseFloat(screen.value);
+  toggleImg.src = "../assets/images/USD.svg";
+  input = screen.value;
+};
+
+ILSBtn.onclick = () => {
+  let ILS = (screen.value *= "3.1");
+  screen.value = ILS.toFixed(5);
+  screen.value = parseFloat(screen.value);
+  toggleImg.src = "../assets/images/ILS.svg";
+  input = screen.value;
+};
+
+EuroBtn.onclick = () => {
+  let Euro = (screen.value /= "2.6");
+  screen.value = Euro.toFixed(5);
+  screen.value = parseFloat(screen.value);
+  toggleImg.src = "../assets/images/eur.svg";
+  input = screen.value;
+};
+EuroILSBtn.onclick = () => {
+  let EuroILS = (screen.value *= "2.6");
+  screen.value = EuroILS.toFixed(5);
+  screen.value = parseFloat(screen.value);
+  toggleImg.src = "../assets/images/ILS.svg";
+  input = screen.value;
+};
+
+// ShowCurrency
+let showCurr = document.getElementById("showCurrency");
+let curr = document.querySelectorAll(".currency");
+window.onclick = function (event) {
+  if (event.target == showCurr) {
+    showCurr.style.display = "none";
+    curr.forEach((curr) => {
+      curr.style.display = "block";
+    });
+  } else {
+    showCurr.style.display = "block";
+    curr.forEach((curr) => {
+      curr.style.display = "none";
+    });
+  }
+};
